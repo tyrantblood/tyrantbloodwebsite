@@ -49,7 +49,7 @@ background: linear-gradient(to bottom, #ff39c3, #ff39c3) !important;
 .loadbar {
     width: auto;
     height: 1.5vh;
-    background: rgb(100, 100, 100);
+    background: rgb(255, 64, 196);
     box-shadow: 0 1px 5px #0003, 0 2px 2px #00000024, 0 3px 1px -2px #0000001f;
     z-index: 9999;
     border-radius: 1vh;
@@ -60,7 +60,7 @@ background: linear-gradient(to bottom, #ff39c3, #ff39c3) !important;
     width: auto;
     max-width: 100%;
     height: 1.5vh;
-    background: rgb(175, 0, 0);
+    background: rgb(255, 64, 196);
     box-shadow: 0 0 5px rgb(130, 0, 0);
     z-index: 9998;
     left: 0%;
@@ -172,7 +172,7 @@ opacity: 1.0;
     width: 1px;
     height: 60%;
     margin-left: 7px;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.25));
+    background: linear-gradient(to bottom, rgba(255, 64, 196, 0), rgba(255, 64, 196, 0.25));
     animation: stem 0.5s linear infinite;
 }
 
@@ -228,7 +228,7 @@ opacity: 1.0;
 
 
 .q-carousel {
-    background: rgb(0, 0, 0) !important;
+    background: rgb(255, 64, 196) !important;
     height: auto !important;
     filter: blur(5px);
     -webkit-filter: blur(5px);

@@ -20,7 +20,7 @@ body {
     user-select: none !important;
     margin: 0;
     overflow: hidden;
-    background: linear-gradient(to bottom, #a9fc00, #a9fc00) !important;
+    background: linear-gradient(to bottom, #ff39c3, #ff39c3) !important;
 }
 
 .branding {

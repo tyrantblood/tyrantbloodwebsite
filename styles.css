@@ -5,11 +5,12 @@ html, body {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #0b0e0f, #0b0e0f);
+    background-color: black; /* Set the background color to black */
     display: flex; 
     justify-content: center;
     align-items: center;
     height: 100vh;
+    color: white; /* Make text white for contrast */
 }
 
 /* Prevent user selection */
@@ -32,43 +33,6 @@ body {
 
 /* Logo */
 .brand-logo {
-    width: 100px;
-    -webkit-filter: drop-shadow(0px 0px 10px rgb(10, 10, 10));
-    filter: drop-shadow(0px 0px 10px rgb(10, 10, 10));
-}
-
-/* Social media icons container */
-.loadingtext {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem; /* Space between icons */
-    margin-top: 1rem; /* Space between logo and icons */
-}
-
-/* Individual icon styling */
-.loadingtext a img {
-    width: 50px; /* Default size of the icons */
-    height: 50px;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.loadingtext a:hover img {
-    transform: scale(1.1); /* Slight zoom effect on hover */
-    opacity: 0.8; /* Slight opacity change on hover */
-}
-
-/* Responsive size adjustments for smaller screens */
-@media (max-width: 768px) {
-    .loadingtext a img {
-        width: 40px; /* Smaller icons for tablets and below */
-        height: 40px;
-    }
-}
-
-@media (max-width: 480px) {
-    .loadingtext a img {
-        width: 35px; /* Even smaller icons for mobile screens */
-        height: 35px;
-    }
-}
+    width: 500px; /* Set logo size to 500px */
+    height: auto; /* Keep aspect ratio */
+    -webkit-filter: drop-sh

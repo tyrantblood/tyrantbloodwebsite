@@ -46,7 +46,7 @@ html, body {
 .loadingtext h1 {
     font-size: 2.5rem;
     margin: 0px;
-line-height: 1.2em;
+    line-height: 1.2em;
     color: #ffff38;
     text-transform: uppercase;
 }
@@ -73,6 +73,13 @@ line-height: 1.2em;
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+/* Hover effect for social icons */
+.social-icons a:hover {
+    transform: scale(1.2); /* Slightly enlarges the icon */
+    opacity: 0.8; /* Reduces the opacity when hovered */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition effect */
 }
 
 /* Responsive styles */

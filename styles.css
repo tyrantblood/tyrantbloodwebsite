@@ -57,8 +57,20 @@ body {
     margin: 10px;
 }
 
-.loadingtext a:hover {
-    opacity: 0.5; 
+/* Set max width and height for images to be responsive */
+.loadingtext a img {
+    max-width: 40px;  /* Adjust size as needed */
+    max-height: 40px; /* Adjust size as needed */
+    width: auto;
+    height: auto;
+}
+
+/* Scaling for larger screens */
+@media screen and (min-width: 600px) {
+    .loadingtext a img {
+        max-width: 50px;  /* Slightly bigger on larger screens */
+        max-height: 50px;
+    }
 }
 
 .loadingbar {

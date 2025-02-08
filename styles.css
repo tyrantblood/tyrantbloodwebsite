@@ -1,217 +1,74 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;500;900&display=swap');
-
+/* Global reset */
 html, body {
-    max-width: 100% !important;
-    max-height: 100% !important;
-    overflow-x: hidden !important;
+    max-width: 100%;
+    max-height: 100%;
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
+    background: linear-gradient(to bottom, #0b0e0f, #0b0e0f);
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
+/* Prevent user selection */
 body {
-    font-family: 'Roboto Condensed', sans-serif;
-    background: linear-gradient(to bottom, #0b0e0f, #0b0e0f) !important;
-    -webkit-user-select: none !important;
-    -moz-user-select: none !important;
-    -ms-user-select: none !important;
-    user-select: none !important;
-    overflow: auto; /* Changed from overflow: hidden */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
 
-.loadingtext img {
-    width: 2.3em; /* Fixed the comma issue */
-    height: 2.3em;
-}
-
-/* Branding (center logo and content) */
+/* Branding (Logo) */
 .branding {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     text-align: center;
-    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
+/* Logo */
 .brand-logo {
-    width: 100px !important;
-    text-align: center !important;
+    width: 100px;
     -webkit-filter: drop-shadow(0px 0px 10px rgb(10, 10, 10));
     filter: drop-shadow(0px 0px 10px rgb(10, 10, 10));
 }
 
-/* Loading bar styling */
-.loadingbar {
-    position: relative;
-    width: 100% !important;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-inline: 5px;
-}
-
-.loadbar {
-    width: 100%;
-    height: 1.5vh;
-    background: rgb(255, 64, 196);
-    box-shadow: 0 1px 5px #0003, 0 2px 2px #00000024, 0 3px 1px -2px #0000001f;
-    z-index: 9999;
-    border-radius: 1vh;
-    overflow: hidden;
-}
-
-.loadbarInsert {
-    width: 100%;
-    height: 1.5vh;
-    background: rgb(255, 64, 196);
-    box-shadow: 0 0 5px rgb(130, 0, 0);
-    z-index: 9998;
-    left: 0%;
-}
-
-/* Loading text styling */
+/* Social media icons container */
 .loadingtext {
-    color: white;
-    font-size: 1.2rem;
-    font-weight: 900;
-    letter-spacing: 1px;
-    text-align: center;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-    text-transform: uppercase;
-    z-index: 9999 !important;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem; /* Space between icons */
+    margin-top: 1rem; /* Space between logo and icons */
 }
 
-.loadingtext a {
-    color: green;
-    font-size: 1.2rem;
-    font-weight: 900;
-    letter-spacing: 1px;
-    padding-top: 1em;
-    text-align: center;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-    text-decoration: none;
-    opacity: 1.0;
+/* Individual icon styling */
+.loadingtext a img {
+    width: 50px; /* Default size of the icons */
+    height: 50px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.loadingtext a:hover {
-    opacity: 0.5; 
+.loadingtext a:hover img {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+    opacity: 0.8; /* Slight opacity change on hover */
 }
 
-@keyframes blinker {
-    50% {
-        opacity: 0.2;
+/* Responsive size adjustments for smaller screens */
+@media (max-width: 768px) {
+    .loadingtext a img {
+        width: 40px; /* Smaller icons for tablets and below */
+        height: 40px;
     }
 }
 
-/* Rain animation */
-.rain {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.rain.back-row {
-    bottom: 60px;
-    opacity: 0.5;
-}
-
-.drop, .drop2, .drop3 {
-    position: absolute;
-    bottom: 100%;
-    width: 15px;
-    height: 120px;
-}
-
-.drop {animation: drop 0.5s linear infinite;}
-.drop2 {animation: drop2 0.5s linear infinite;}
-.drop3 {animation: drop3 0.5s linear infinite;}
-
-@keyframes drop {
-    0% { transform: translateY(0vh); }
-    75% { transform: translateY(103vh); }
-    100% { transform: translateY(103vh); }
-}
-
-@keyframes drop2 {
-    0% { transform: translateY(0vh); }
-    75% { transform: translateY(95vh); }
-    100% { transform: translateY(95vh); }
-}
-
-@keyframes drop3 {
-    0% { transform: translateY(0vh); }
-    75% { transform: translateY(90vh); }
-    100% { transform: translateY(90vh); }
-}
-
-.stem {
-    width: 1px;
-    height: 60%;
-    margin-left: 7px;
-    background: linear-gradient(to bottom, rgba(255, 64, 196, 0), rgba(255, 64, 196, 0.25));
-    animation: stem 0.5s linear infinite;
-}
-
-@keyframes stem {
-    0% { opacity: 1; }
-    65% { opacity: 1; }
-    75% { opacity: 0; }
-    100% { opacity: 0; }
-}
-
-.splat {
-    width: 15px;
-    height: 10px;
-    border-top: 2px dotted rgba(255, 255, 255, 0.5);
-    border-radius: 50%;
-    opacity: 1;
-    transform: scale(0);
-    animation: splat 0.5s linear infinite;
-}
-
-@keyframes splat {
-    0% { opacity: 1; transform: scale(0); }
-    80% { opacity: 1; transform: scale(0); }
-    90% { opacity: 0.5; transform: scale(1); }
-    100% { opacity: 0; transform: scale(1.5); }
-}
-
-/* Carousel and button adjustments */
-.q-carousel {
-    background: rgb(255, 64, 196) !important;
-    height: auto !important;
-    filter: blur(5px);
-    -webkit-filter: blur(5px);
-}
-
-.q-btn {
-    z-index: 9999 !important;
-}
-
-/* Mobile adjustments (media queries) */
-@media only screen and (max-width: 768px) {
-    .brand-logo {
-        width: 80px !important; /* smaller logo on mobile */
-    }
-
-    .loadingtext {
-        font-size: 1rem; /* smaller font for better mobile view */
-    }
-
-    .loadingtext img {
-        width: 1.8em;
-        height: 1.8em;
-    }
-
-    .brand-logo {
-        width: 90px !important;
+@media (max-width: 480px) {
+    .loadingtext a img {
+        width: 35px; /* Even smaller icons for mobile screens */
+        height: 35px;
     }
 }
-
-@media only screen and (max-width: 480px) {
-    .loadingtext {
-        font-size: 0.9rem; /* further reduce font size */
-    }
-
-    .loadingtext img {
-        width:

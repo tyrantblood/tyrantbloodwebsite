@@ -46,6 +46,7 @@ html, body {
 .loadingtext h1 {
     font-size: 2.5rem;
     margin: 0px;
+line-height: 1.2em;
     color: #ffff38;
     text-transform: uppercase;
 }

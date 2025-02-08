@@ -55,8 +55,9 @@ html, body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 5px;
+    gap: 10px;
     padding-top: 0px;
+    margin: 0;
 }
 
 /* Social icon styling */
@@ -75,10 +76,11 @@ html, body {
 
 /* Responsive styles */
 @media (max-width: 768px) {
-    /* On smaller screens, allow two rows */
+    /* On smaller screens, allow icons to fit in a row */
     .social-icons {
-        flex-direction: column;
-        gap: 10px;
+        flex-direction: row; /* Keep icons in a single row */
+        gap: 10px;  /* Slight gap between icons */
+        justify-content: center;  /* Keep icons centered */
     }
 }
 

@@ -1,3 +1,15 @@
+@font-face {
+    font-family: 'AkiraExpanded';
+    src: url('https://raw.githubusercontent.com/tyrantblood/tyrantbloodwebsite/main/Akira%20Expanded%20Demo.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'AkiraExpanded', sans-serif;
+}
+
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;500;900&display=swap');
 
 html, body {

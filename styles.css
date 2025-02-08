@@ -2,32 +2,35 @@
 
 html, body {
     max-width: 100% !important;
-max-height: 100% !important;
+    max-height: 100% !important;
     overflow-x: hidden !important;
-}
-
-.loadingtext img {
-    width: 2,3em;
-    height: 2.3em;
-
+    margin: 0;
+    padding: 0;
 }
 
 body {
+    font-family: 'Roboto Condensed', sans-serif;
+    background: linear-gradient(to bottom, #0b0e0f, #0b0e0f) !important;
     -webkit-user-select: none !important;
     -moz-user-select: none !important;
     -ms-user-select: none !important;
-    -o-user-select: none !important;
     user-select: none !important;
-    margin: 0;
-    overflow: hidden;
-background: linear-gradient(to bottom, #0b0e0f, #0b0e0f) !important;
+    overflow: auto; /* Changed from overflow: hidden */
 }
 
+.loadingtext img {
+    width: 2.3em; /* Fixed the comma issue */
+    height: 2.3em;
+}
+
+/* Branding (center logo and content) */
 .branding {
     position: fixed;
     top: 50%;
-    height: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
+    height: 50%;
 }
 
 .brand-logo {
@@ -37,17 +40,17 @@ background: linear-gradient(to bottom, #0b0e0f, #0b0e0f) !important;
     filter: drop-shadow(0px 0px 10px rgb(10, 10, 10));
 }
 
+/* Loading bar styling */
 .loadingbar {
     position: relative;
     width: 100% !important;
-    height: auto !important;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-inline: 5px;
 }
 
 .loadbar {
-    width: auto;
+    width: 100%;
     height: 1.5vh;
     background: rgb(255, 64, 196);
     box-shadow: 0 1px 5px #0003, 0 2px 2px #00000024, 0 3px 1px -2px #0000001f;
@@ -57,8 +60,7 @@ background: linear-gradient(to bottom, #0b0e0f, #0b0e0f) !important;
 }
 
 .loadbarInsert {
-    width: auto;
-    max-width: 100%;
+    width: 100%;
     height: 1.5vh;
     background: rgb(255, 64, 196);
     box-shadow: 0 0 5px rgb(130, 0, 0);
@@ -66,36 +68,33 @@ background: linear-gradient(to bottom, #0b0e0f, #0b0e0f) !important;
     left: 0%;
 }
 
+/* Loading text styling */
 .loadingtext {
-    animation: //blinker 1.5s linear infinite;
     color: white;
-    font-family: 'Roboto Condensed', sans-serif;
     font-size: 1.2rem;
     font-weight: 900;
     letter-spacing: 1px;
     text-align: center;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     text-transform: uppercase;
-z-index: 9999 !important;
+    z-index: 9999 !important;
 }
 
 .loadingtext a {
-    animation: //blinker 1.5s linear infinite;
     color: green;
-    font-family: 'Roboto Condensed', sans-serif;
     font-size: 1.2rem;
     font-weight: 900;
     letter-spacing: 1px;
     padding-top: 1em;
     text-align: center;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-    text-transform: uppercase;
-text-decoration: none; 
-opacity: 1.0;
+    text-decoration: none;
+    opacity: 1.0;
 }
+
 .loadingtext a:hover {
     opacity: 0.5; 
-  }
+}
 
 @keyframes blinker {
     50% {
@@ -103,17 +102,16 @@ opacity: 1.0;
     }
 }
 
+/* Rain animation */
 .rain {
     position: absolute;
     left: 0;
     width: 100%;
     height: 100%;
-    
 }
 
 .rain.back-row {
-    display: block;
-        bottom: 60px;
+    bottom: 60px;
     opacity: 0.5;
 }
 
@@ -122,49 +120,28 @@ opacity: 1.0;
     bottom: 100%;
     width: 15px;
     height: 120px;
-   
 }
 
 .drop {animation: drop 0.5s linear infinite;}
-
 .drop2 {animation: drop2 0.5s linear infinite;}
-
 .drop3 {animation: drop3 0.5s linear infinite;}
 
 @keyframes drop {
-    0% {
-        transform: translateY(0vh);
-    }
-    75% {
-        transform: translateY(103vh);
-    }
-    100% {
-        transform: translateY(103vh);
-    }
+    0% { transform: translateY(0vh); }
+    75% { transform: translateY(103vh); }
+    100% { transform: translateY(103vh); }
 }
 
 @keyframes drop2 {
-    0% {
-        transform: translateY(0vh);
-    }
-    75% {
-        transform: translateY(95vh);
-    }
-    100% {
-        transform: translateY(95vh);
-    }
+    0% { transform: translateY(0vh); }
+    75% { transform: translateY(95vh); }
+    100% { transform: translateY(95vh); }
 }
 
 @keyframes drop3 {
-    0% {
-        transform: translateY(0vh);
-    }
-    75% {
-        transform: translateY(90vh);
-    }
-    100% {
-        transform: translateY(90vh);
-    }
+    0% { transform: translateY(0vh); }
+    75% { transform: translateY(90vh); }
+    100% { transform: translateY(90vh); }
 }
 
 .stem {
@@ -176,18 +153,10 @@ opacity: 1.0;
 }
 
 @keyframes stem {
-    0% {
-        opacity: 1;
-    }
-    65% {
-        opacity: 1;
-    }
-    75% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 0;
-    }
+    0% { opacity: 1; }
+    65% { opacity: 1; }
+    75% { opacity: 0; }
+    100% { opacity: 0; }
 }
 
 .splat {
@@ -201,79 +170,48 @@ opacity: 1.0;
 }
 
 @keyframes splat {
-    0% {
-        opacity: 1;
-        transform: scale(0);
-    }
-    80% {
-        opacity: 1;
-        transform: scale(0);
-    }
-    90% {
-        opacity: 0.5;
-        transform: scale(1);
-    }
-    100% {
-        opacity: 0;
-        transform: scale(1.5);
-    }
+    0% { opacity: 1; transform: scale(0); }
+    80% { opacity: 1; transform: scale(0); }
+    90% { opacity: 0.5; transform: scale(1); }
+    100% { opacity: 0; transform: scale(1.5); }
 }
 
-
-
-
-
-
-
-
+/* Carousel and button adjustments */
 .q-carousel {
     background: rgb(255, 64, 196) !important;
     height: auto !important;
     filter: blur(5px);
     -webkit-filter: blur(5px);
 }
-.q-mb-md-d {
-    padding-top: 0px !important;
-    padding-left: 0.3vw !important;
-}
-.q-toggle {
-    margin-left: -0.5vw !important;
-}
-.q-toggle__label {
-    font-size: 15px !important;
-    font-weight: 500 !important;
-}
-.q-card {
-    z-index: 9999 !important;
-    padding-bottom: 0px;
-}
+
 .q-btn {
     z-index: 9999 !important;
 }
 
+/* Mobile adjustments (media queries) */
+@media only screen and (max-width: 768px) {
+    .brand-logo {
+        width: 80px !important; /* smaller logo on mobile */
+    }
 
-body.desktop.no-touch.within-iframe.body--light.q-body--prevent-scroll {
-    position: relative !important;
+    .loadingtext {
+        font-size: 1rem; /* smaller font for better mobile view */
+    }
+
+    .loadingtext img {
+        width: 1.8em;
+        height: 1.8em;
+    }
+
+    .brand-logo {
+        width: 90px !important;
+    }
 }
-.absolute-full, .fixed-full, .fullscreen {
-    top: -3px !important;
-    bottom: -1px !important;
-}
-.absolute-bottom, .fixed-bottom {
-    z-index: 1 !important;
-}
-span.q-btn__content.text-center.col.items-center.q-anchor--skip.justify-center.column {
-    text-transform: none !important;
-}
-.q-avatar__content.row.flex-center.overflow-hidden {
-    overflow: initial !important;
-}
-.q-carousel .q-carousel--padding, .q-carousel__slide {
-    padding-top: 0px !important;
-}
-.scroll {
-    overflow: hidden !important;
-}
-.q-focus-helper {
-    opacity: 0 !important;
-}
+
+@media only screen and (max-width: 480px) {
+    .loadingtext {
+        font-size: 0.9rem; /* further reduce font size */
+    }
+
+    .loadingtext img {
+        width:

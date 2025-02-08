@@ -44,8 +44,8 @@ html, body {
 
 /* Tyrantblood text styling */
 .loadingtext h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+    font-size: 2rem;
+    margin-bottom: 5px;
     color: #ffff38;
     text-transform: uppercase;
 }
@@ -56,14 +56,14 @@ html, body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
-    padding-top: 20px;
+    padding-top: 5px;
 }
 
 /* Social icon styling */
 .social-icons a {
     display: block;
-    width: 50px;  /* Set icon width */
-    height: 50px;
+    width: 30px;  /* Set icon width */
+    height: 30px;
 }
 
 /* Make images responsive */
